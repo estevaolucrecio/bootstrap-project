@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0, shrink-to-fit=no">
+    <title>Agenda CRUD</title>
+
+    <!-- Google Fonts - Comic Neue -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/illegal.css">
+    <link rel="stylesheet" href="css/boots_alter.css">
+</head>
+
+<body>
+    <header>
+        <!-- Construção da barra de navegação -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-cor-menu">
+            <section class="container py-2">
+                <a href="" class="navbar-brand">
+                    <img src="images/timetable.png" width="40rem" alt="Sumiu" class="img-fluid">
+                    <span>Agenda CRUD</span>
+                </a>
+
+                <!-- Definição do botão do menu hamburguer -->
+                <i class="bi bi-liste navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                aria-current="navbar" aria-controls="navbar-items" aria-expanded="false"
+                aria-label="Toggle navigation"></i>
+
+                <!-- Definindo os itens do menu -->
+                <section class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Operações CRUD</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Sobre</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container-fluid mt-3">
+
+        <!-- Início do slide -->
+        <section class="container" id="container-slider">
+            <section class="carousel slide" id="slider" data-bs-ride="carousel" data-bs-interval="1500">
+                <section class="carousel-indicators">
+
+                    <button type="button" class="active" data-bs-target="#slider" data-bs-slide-to="0"
+                        aria-current="true" aria-label="Slide 1"></button>
+
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+                    <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </section>
+
+                <section class="carousel-inner">
+                    <section class="carousel-item active">
+                        <img src="images/persons.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption">
+                            <h4 class="title">Imagem 1</h4>
+                            <a href="" class="btn btn-primary">Saiba mais</a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img src="images/products.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption">
+                            <h4 class="title">Imagem 2</h4>
+                            <a href="" class="btn btn-primary">Saiba mais</a>
+                        </section>
+                    </section>
+
+                    <section class="carousel-item">
+                        <img src="images/stok.jpg" alt="" class="d-block w-100">
+                        <section class="carousel-caption">
+                            <h4 class="title">Imagem 3</h4>
+                            <a href="" class="btn btn-primary">Saiba mais</a>
+                        </section>
+                    </section>
+                </section>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#container-slider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#container-slider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </section>
+        </section>
+        <!-- Fim do slider -->
+
+        <!-- Início do banner -->
+        <section class="container" id="container-banner">
+            <section class="row">
+
+                <section class="col-12">
+                    <h4 class="title text-uppercase">Definições CRUD</h4>
+                </section>
+
+                <section class="col-12 col-md-3 my-1">
+                    <section class="card h-100">
+                        <section class="card-body texto">
+                            <i class="bi bi-plus-circle-fill"></i>
+                            <h4 class="card-title text-uppercase">Create - Inserir</h4>
+                            <p class="card-text">
+                                Esta operação do CRUD realiza a inserção de novos itens em uma base de dados!
+                            </p>
+
+                            <!-- Button trigger modal -->
+
+                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                                data-bs-target="#modalCreate">
+                                Inserir
+                            </button>
+                            <!-- <a href="" class="btn btn-outline-primary">Incluir</a>
+                            <a href="" class="btn btn-secondary">Salvar</a> -->
+
+                        </section>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-3 my-1">
+                    <section class="card h-100">
+                        <section class="card-body texto">
+                            <i class="bi bi-person-vcard-fill"></i>
+                            <h4 class="card-title text-uppercase">Read - Visualizar</h4>
+                            <p class="card-text">
+                                Esta operação do CRUD realiza a visualização dos registros em uma base de dados!
+                            </p>
+
+                            <button class="btn btn-success w-100" data-bs-toggle="modal"
+                                data-bs-target="#modalView">Visualizar
+                            </button>
+                            <!-- <a href="" class="btn btn-outline-success">Ver</a>
+                            <a href="" class="btn btn-secondary">Exibir</a> -->
+
+                        </section>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-3 my-1">
+                    <section class="card h-100">
+                        <section class="card-body texto">
+                            <i class="bi bi-recycle"></i>
+                            <h4 class="card-title text-uppercase">Update - Atualizar</h4>
+                            <p class="card-text">
+                                Esta operação do CRUD realiza a atualização dos itens em uma base de dados!
+                            </p>
+
+                            <button class="btn btn-warning w-100" data-bs-toggle="modal"
+                            data-bs-target="#modalUpdate">Atualizar</button>
+                            <!-- <a href="" class="btn btn-warning">Alterar</a>
+                            <a href="" class="btn btn-outline-warning">Mudar</a>
+                            <a href="" class="btn btn-secondary">Trocar</a> -->
+                        </section>
+                    </section>
+                </section>
+
+                <section class="col-12 col-md-3 my-1">
+                    <section class="card h-100">
+                        <section class="card-body texto">
+                            <i class="bi bi-trash3-fill"></i>
+                            <h4 class="card-title text-uppercase">Delete - Excluir</h4>
+                            <p class="card-text">
+                                Esta operação do CRUD realiza a exclusão de itens em uma base de dados!
+                            </p>
+
+                            <button class="btn btn-danger w-100" data-bs-toggle="modal"
+                            data-bs-target="#modalDelete">Excluir</button>
+                            <!-- <a href="" class="btn btn-outline-danger">Apagar</a>
+                            <a href="" class="btn btn-secondary">Deletar</a> -->
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+
+    <!-- Área de modais -->
+
+    <!-- Modal Create -->
+    <section class="modal fade" id="modalCreate" tabindex="-1" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-centered modal-lg">
+            <form class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5">NOVO USUÁRIO</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+               
+                    <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Senha</label>
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress">Endereço</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="ex:Rua dos bobos, nº 1">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress2">Endereço 2</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputCity">Cidade</label>
+                            <input type="text" class="form-control" id="inputCity">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputEstado">Estado</label>
+                            <select id="inputEstado" class="form-control">
+                              <option selected>Escolher...</option>
+                              <option>AC<br></option>
+                              <option>AL<br></option>
+                              <option>AP<br></option>
+                              <option>AM<br></option>
+                              <option>BA<br></option>
+                              <option>CE<br></option>
+                              <option>ES<br></option>
+                              <option>GO<br></option>
+                              <option>MA<br></option>
+                              <option>MT<br></option>
+                              <option>MS<br></option>
+                              <option>MG<br></option>
+                              <option>PA<br></option>
+                              <option>PB<br></option>
+                              <option>PR<br></option>
+                              <option>PE<br></option>
+                              <option>PI<br></option>
+                              <option>RJ<br></option>
+                              <option>RN<br></option>
+                              <option>RS<br></option>
+                              <option>RO<br></option>
+                              <option>RR<br></option>
+                              <option>SC<br></option>
+                              <option>SP<br></option>
+                              <option>SE<br></option>
+                              <option>TO<br></option>
+                              <option>DF<br></option>
+
+
+                            </select>
+                          </div>
+                          <div class="form-group col-md-2">
+                            <label for="inputCEP">CEP</label>
+                            <input type="text" class="form-control" id="inputCEP">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                              Clique em mim
+                            </label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                      </form>
+
+
+
+                    <section class="mb-3 mt-3">
+                        <label class="fw-bold" for="name_it" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="name_it" placeholder="Nome da tarefa" name="name_it" maxlength="60" required>
+                    </section>
+                    <section class="mb-3 mt-3">
+                        <label class="fw-bold" for="descr_it">Descrição:</label>
+                        <textarea class="form-control" rows="5" id="descr_it" placeholder="Descrição da tarefa" name="descr_it" required></textarea>
+                    </section>
+                    <section class="mb-3 mt-3">
+                        <label class="fw-bold" for="time_it">Prazo:</label>
+                        <input type="date" class="form-control" id="date_it" name="date_it">
+                    </section>
+                </section>
+                <section class="d-flex justify-content-between modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-outline-primary">Salvar</button>
+                </section>
+            </form>
+        </section>
+    </section>
+
+    <!-- Modal View -->
+    <section class="modal fade" id="modalView" tabindex="-1" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5">VISUALIZAR</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    <article class="card my-2">
+                        <section class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold m-0">[NOME DA TAREFA]</p>
+                            <time class="fw-medium">[PRAZO DA TAREFA]</time>
+                        </section>
+                        <section class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </section>
+                    </article>
+                    <article class="card my-2">
+                        <section class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold">[NOME DA TAREFA]</p>
+                        </section>
+                        <section class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </section>
+                    </article>
+                </section>
+                <section class="d-flex justify-content-around modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                    <!-- <button type="button" class="btn btn-primary">Visualizar</button> -->
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Modal Update -->
+    <section class="modal fade" id="modalUpdate" tabindex="-1" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5">ATUALIZAR</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    <article class="card my-2">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold m-0">[NOME DA TAREFA]</p>
+                            <time class="fw-medium">[PRAZO DA TAREFA]</time>
+                            <button class="btn btn-secondary btn-sm rounded update_t" data-index="index">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </div>
+                    </article>
+                    <article class="card my-2">
+                        <section class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold">[NOME DA TAREFA]</p>
+                            <button class="btn btn-secondary btn-sm rounded update_t" data-index="index">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                        </section>
+                        <section class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </section>
+                    </article>
+                </section>
+                <section class="d-flex justify-content-around modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <!-- Modal Delete -->
+    <section class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
+        <section class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
+            <section class="modal-content">
+                <section class="modal-header">
+                    <h1 class="modal-title fs-5">EXCLUIR</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </section>
+                <section class="modal-body">
+                    <article class="card my-2">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold m-0">[NOME DA TAREFA]</p>
+                            <time class="fw-medium">[PRAZO DA TAREFA]</time>
+                            <button class="btn btn-danger btn-sm rounded del_t" data-index="index">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </div>
+                    </article>
+                    <article class="card my-2">
+                        <section class="card-header d-flex justify-content-between align-items-center">
+                            <p class="fw-bold">[NOME DA TAREFA]</p>
+                            <button class="btn btn-danger btn-sm rounded del_t" data-index="index">
+                                <i class="bi bi-trash-fill"></i>
+                            </button>
+                        </section>
+                        <section class="card-body">
+                          <p class="card-text">[DESCRIÇÃO DA TAREFA]</p>
+                        </section>
+                    </article>
+                </section>
+                <section class="d-flex justify-content-around modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Fechar</button>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <footer></footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Meu JS -->
+    <script src="js/illegal.js"></script>
+</body>
+
+</html>
